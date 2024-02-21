@@ -5,7 +5,9 @@ My project general idea is : // building A web application  with an api to honou
 
  Hackathon stracture:
 
-html// Landing page : title font white , background black with a candle ,underneath entry button : functionality (when clicked the candle light up)
+html// Landing page :
+
+ title font white , background black with a candle ,underneath entry button : functionality (when clicked the candle light up)
 
 style: will hold all the basic styles
 

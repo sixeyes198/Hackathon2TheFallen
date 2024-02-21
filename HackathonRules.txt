@@ -1,0 +1,15 @@
+
+
+My project general idea is : // building A web application  with an api to honour the fallen soldiers/civillians by lighting a candle in their memory and read about the individual(Using database & node js ,express Async..) 
+
+
+ Hackathon stracture:
+
+html// Landing page : title font white , background black with a candle ,underneath entry button : functionality (when clicked the candle light up)
+
+style: will hold all the basic styles
+
+server.js : will hold all the api routes  + connection to the database  // 
+
+script.js : maybe the search and click functions 
+

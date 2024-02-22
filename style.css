@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+}
+#searchBar {
+  width: 600px;
+  height: 30px;
+}
 /* Top Background  */
 #imgContainer {
   background-color: black;

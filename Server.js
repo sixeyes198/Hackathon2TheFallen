@@ -1,19 +1,27 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import router from "./routes/DataRoutes.js";
+import cors from "cors";
 
+// // files path
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// using app with express
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 // css static link
 app.use(express.static(path.join(__dirname)));
-// Home page
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(router);
+// cors
+app.use(cors());
+
+// Home page index html linking
 app.get("/Homepage", (req, res) => {
-  res.status(200).sendFile(__dirname + "/index.html");
+  res.status(200).sendFile(__dirname + "/Public/index.html");
 });
 
 // console.log(__dirname);

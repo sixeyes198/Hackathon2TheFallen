@@ -130,3 +130,11 @@ header {
     filter: blur(6em) opacity(0.8);
   }
 }
+
+#fallenData {
+  position: relative;
+  width: 600px;
+  height: 700px;
+  border: 1px solid black;
+  color: black;
+}

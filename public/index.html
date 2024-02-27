@@ -15,19 +15,42 @@
     <title>Honouring the fallen</title>
   </head>
   <body>
-    <!-- Top Black BG -->
-    <div id="imgContainer"></div>
     <header>
-      <input type="text" id="searchBar" placeholder="search Fallen By Name" />
+      <nav id="navBar">
+        <li><a href="#home">Fallens May Their Souls Rest in Peace</a></li>
+      </nav>
     </header>
-    <!-- Candle  -->
-    <div class="candle">
-      <span class="glow"></span>
-      <span class="flames"></span>
-      <span class="thread"></span>
-    </div>
 
-    <div id="fallenData"></div>
+    <!-- Top Black BG -->
+    <div id="imgContainer">
+      <!-- Candle  -->
+      <div class="candle">
+        <span class="glow"></span>
+        <span class="flames"></span>
+        <span class="thread"></span>
+        <img
+          id="star"
+          src="/Images/tar-david-angle-triangle-removebg-preview.png"
+          alt="star of david"
+          width="300px"
+          height="300px"
+        />
+        <!-- Search bar  -->
+        <form id="searchForm">
+          <input
+            type="text"
+            id="searchInput"
+            name="query"
+            placeholder="search Fallen By Name"
+          />
+          <button id="searchButton">Search</button>
+          <button id="secondButton">Light Candle To Honour</button>
+        </form>
+      </div>
+
+      <!-- all fallen container -->
+      <div id="fallenData"></div>
+    </div>
 
     <script src="/public/Script.js"></script>
   </body>

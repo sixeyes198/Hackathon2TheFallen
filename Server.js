@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import router from "./routes/DataRoutes.js";
 import cors from "cors";
+import { db } from "./config/db.js";
 
 // // files path
 const __filename = fileURLToPath(import.meta.url);
@@ -23,6 +24,13 @@ app.use(cors());
 app.get("/Homepage", (req, res) => {
   res.status(200).sendFile(__dirname + "/Public/index.html");
 });
+
+// app.get("/search", (req, res) => {
+//   const { first_name } = req.body;
+//   db("soldires")
+//     .select("*")
+//     .where("first_name", "%" + first_name + "%");
+// });
 
 // console.log(__dirname);
 

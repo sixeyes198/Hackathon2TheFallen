@@ -16,7 +16,7 @@ export const _allFallens = async (req, res) => {
 
 export const _searchForFallen = async (req, res) => {
   try {
-    const response = await searchForFallen(req.params.id);
+    const response = await searchForFallen(req.body);
     res.status(200).json(response);
   } catch (error) {
     res.status(404).json({ messege: "Cant find your search" });

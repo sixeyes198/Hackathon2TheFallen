@@ -3,24 +3,42 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   display: flex;
   justify-content: center;
   position: relative;
   padding: 10px;
+  background-color: black;
+  width: 100vw;
 }
-#searchBar {
-  width: 600px;
-  height: 30px;
+
+li {
+  display: inline;
+  margin: 5px;
 }
+a {
+  color: white;
+  text-decoration-line: none;
+  font-size: 50px;
+  font-family: "Protest Revolution";
+  font-weight: 400;
+}
+
 /* Top Background  */
 #imgContainer {
   background-color: black;
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
   position: absolute;
 }
+#star {
+  position: relative;
+  top: 200px;
+  left: 200px;
+}
 /* Candle styles */
+
 .candle {
   object-fit: contain;
   position: relative;
@@ -54,7 +72,9 @@ header {
   background: linear-gradient(#444, orange, saddlebrown, sienna, darkorange);
   filter: opacity(0.7);
 }
+
 /* Thread styles */
+
 .thread {
   position: absolute;
   width: 0.6em;
@@ -63,11 +83,13 @@ header {
   background: linear-gradient(#111, black, orange 90%);
   border-radius: 40% 40% 0 0;
 }
+
 .flames {
   position: absolute;
   width: 2.4em;
 }
-.flames::before {
+
+.flames.active::before {
   content: "";
   position: absolute;
   width: inherit;
@@ -79,8 +101,9 @@ header {
   box-sizing: border-box;
   filter: opacity(0.7);
 }
+
 /* Flames style */
-.flames::after {
+.flames.active::after {
   content: "";
   position: absolute;
   width: inherit;
@@ -91,7 +114,9 @@ header {
   box-shadow: 0 -0.6em 0.4em darkorange;
   animation: enlarge 5s linear infinite, move 6s linear infinite;
 }
+
 /* Flame movment */
+
 @keyframes move {
   0%,
   100% {
@@ -101,7 +126,9 @@ header {
     transform: rotate(-2deg);
   }
 }
+
 /* Flame movement Up */
+
 @keyframes enlarge {
   0%,
   100% {
@@ -113,8 +140,10 @@ header {
     top: -13em;
   }
 }
+
 /* Red glowing effect */
-.glow {
+
+.glow.active {
   position: absolute;
   width: 10em;
   height: 18em;
@@ -132,9 +161,94 @@ header {
 }
 
 #fallenData {
-  position: relative;
-  width: 600px;
-  height: 700px;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+  margin-top: 30%;
+  height: 130vh;
+  width: 100vw;
+  background-color: black;
   color: black;
+}
+.result {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+}
+.result:hover {
+  transform: translateY(-5px);
+}
+.result img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.result .info {
+  padding: 20px;
+}
+
+.result h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.result p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.result button {
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.result button:hover {
+  background-color: #0056b3;
+}
+form {
+  display: flex;
+  margin: 2px;
+  object-fit: contain;
+  position: relative;
+  top: 500px;
+  left: -130px;
+  width: 400px;
+  /* position: fixed;
+  top: 30%;
+  left: 85%;
+  transform: translatex(-50%); */
+}
+#searchInput {
+  width: 500px;
+  height: 35px;
+  padding: 2px;
+}
+button {
+  padding: 2px;
+}
+#searchButton {
+  height: 35px;
+  width: 50px;
+}
+
+#secondButton {
+  height: 35px;
+  width: 200px;
 }

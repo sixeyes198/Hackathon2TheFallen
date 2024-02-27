@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.get("/fallen", _allFallens);
 router.put("/fallen/:id", _editFallen);
-router.get("/fallen/:id", _searchForFallen);
+router.get("/fallen/:name", _searchForFallen);
 router.post("/fallen", _enterFallen);
 
 export default router;

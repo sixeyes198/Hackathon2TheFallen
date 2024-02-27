@@ -7,10 +7,10 @@ export const allFallens = () => {
 };
 
 //Data by id
-export const searchForFallen = (id) => {
+export const searchForFallen = (name) => {
   return db("soldiers")
     .select("id", "first_name", "last_name", "age", "content")
-    .where({ id: id });
+    .where({ name: name });
 };
 
 //Updatind data by id

@@ -25,12 +25,16 @@ app.get("/Homepage", (req, res) => {
   res.status(200).sendFile(__dirname + "/Public/index.html");
 });
 
-// app.get("/search", (req, res) => {
-//   const { first_name } = req.body;
-//   db("soldires")
-//     .select("*")
-//     .where("first_name", "%" + first_name + "%");
-// });
+app.get("/search", async (req, res) => {
+  const { name } = req.query;
+  try {
+    const data = await searchByName(name);
+    res.status(200).json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
 
 // console.log(__dirname);
 

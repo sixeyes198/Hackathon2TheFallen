@@ -22,7 +22,7 @@ const fetchData = async () => {
 
       searchResults.innerHTML += `<div class="result">
      <h1>${item.first_name}</h1>
-     <h3>${item.last_name}</h3>
+     <h2>${item.last_name}</h2>
      <p>${item.age}</p>
      <img src="images/${imageFileName}" alt="${item.first_name} ${item.last_name}" />
      <p>${item.content}</p>

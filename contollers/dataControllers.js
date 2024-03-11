@@ -14,15 +14,18 @@ export const _allFallens = async (req, res) => {
   }
 };
 
+// Searching by name
 export const _searchForFallen = async (req, res) => {
+  const { name } = req.body;
   try {
-    const response = await searchForFallen(req.body);
+    const response = await searchForFallen(name);
     res.status(200).json(response);
   } catch (error) {
-    res.status(500).json({ message: "cant find search" });
+    res.status(404).json({ message: "cant find search" });
   }
 };
 
+///
 export const _editFallen = async (req, res) => {
   const { first_name, last_name, age, content } = req.body;
   try {

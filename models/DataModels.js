@@ -6,11 +6,12 @@ export const allFallens = () => {
   return db("soldiers").select("first_name", "last_name", "age", "content");
 };
 
-//Data by id
+//Data by name
+
 export const searchForFallen = (name) => {
   return db("soldiers")
-    .select("id", "first_name", "last_name", "age", "content")
-    .where({ name: name });
+    .select("*")
+    .whereILike("first_name", "%" + name + "%");
 };
 
 //Updatind data by id
